@@ -23,7 +23,7 @@ for i in range(len(websites['URLs'])):
 
     website = websites['URLs'][i]
     link = url
-    description = results[0].find(websites['desc'][i]).text
+    description = results[0].find(websites['desc'][i]).text.strip()
     if i == 0:
         date = results[0].find_all('div')[3].text.split()
         author = results[0].find_all('div')[2].text.split()
